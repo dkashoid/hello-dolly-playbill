@@ -31,7 +31,7 @@
         .subtitle { margin-top: 5px; font-size: 1rem; opacity: 0.9; }
         .container { max-width: 600px; margin: auto; padding: 20px; }
         
-        /* Fixed Search Bar */
+        /* Sticky Search Bar */
         .search-container {
             position: sticky;
             top: 0;
@@ -47,6 +47,7 @@
             font-size: 1rem;
             box-sizing: border-box;
             outline: none;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         .bio-card {
@@ -63,8 +64,8 @@
         .thanks { font-size: 0.95rem; margin-bottom: 10px; }
         .verse { font-weight: bold; color: var(--dolly-red); font-size: 0.8rem; text-align: right; border-top: 1px solid #eee; padding-top: 8px; }
         
-        footer { text-align: center; padding: 40px 20px; color: #999; font-size: 0.8rem; }
-        .no-results { display: none; text-align: center; padding: 20px; color: #666; }
+        footer { text-align: center; padding: 40px 20px; color: #777; font-size: 0.85rem; line-height: 1.6; border-top: 1px solid #ddd; margin-top: 20px; }
+        .no-results { display: none; text-align: center; padding: 20px; color: #666; font-style: italic; }
     </style>
 </head>
 <body>
@@ -76,10 +77,24 @@
 
 <div class="container">
     <div class="search-container">
-        <input type="text" id="actorSearch" class="search-box" placeholder="Type a name or role..." onkeyup="filterBios()">
+        <input type="text" id="actorSearch" class="search-box" placeholder="Search by name or role..." autocomplete="off">
     </div>
 
     <div id="bioList">
+        <div class="bio-card">
+            <span class="role">Waiter</span>
+            <h2>Sterling Adkins</h2>
+            <div class="credits">Previous: Annie Get Your Gun, Wizard of Oz, &amp; Newsies</div>
+            <div class="thanks">"My Mom and Dad for reminding me I only get one life so why not live it"</div>
+            <div class="verse">Galatian 6:9</div>
+        </div>
+        <div class="bio-card">
+            <span class="role">Rudolph (Rudy)</span>
+            <h2>Owen Akin</h2>
+            <div class="credits">Previous: Finch in Newsies, Lazar Wolf in Fiddler on the Roof, and Uncle Arvide in Guys and Dolls</div>
+            <div class="thanks">"My parents for always encouraging me and Mr. Werntz and Mr. Partridge for directing and helping me become a better actor"</div>
+            <div class="verse">Hebrews 13:13-14</div>
+        </div>
         <div class="bio-card">
             <span class="role">Dolly Levi</span>
             <h2>Ellery Church</h2>
@@ -87,97 +102,65 @@
             <div class="thanks">"I want to thank my amazing friends and family for being so supportive, the wonderful cast, and of course all the people who came together to make this musical possible!"</div>
             <div class="verse">Ephesians 4:32</div>
         </div>
-
         <div class="bio-card">
             <span class="role">Horace Vandergelder</span>
             <h2>Jensen Anthony</h2>
             <div class="credits">Previous: The Wizard of Oz, Newsies, The Unreturning</div>
-            <div class="thanks">"First my thanks go to my mom and dad. Without everything you've sacrificed I wouldn't have this opportunity... Next to my built-in-best-friend, my brother, Seth... Finally, but most importantly, to my Lord and Savior, Jesus Christ."</div>
+            <div class="thanks">"First my thanks go to my mom and dad... Finally, but most importantly, to my Lord and Savior, Jesus Christ."</div>
             <div class="verse">Matthew 4:19-20</div>
         </div>
-
         <div class="bio-card">
             <span class="role">Cornelius Hackl</span>
             <h2>RJ Weaver</h2>
-            <div class="credits">Previous: Newsies (Jack Kelly), UrineTown (Bobby Strong), The Unreturning (George)</div>
-            <div class="thanks">"I want to thank Jesus Christ for dying for my sins. I also want to thank my parents always being there to support me. Finally, I want to thank Mr. Ubiera for teaching me how to sing and for Bryan Partridge for cultivating my love for theater."</div>
+            <div class="credits">Previous: Newsies as Jack Kelly, UrineTown as Bobby Strong, and The Unreturning as George</div>
+            <div class="thanks">"I want to thank Jesus Christ for dying for my sins. I also want to thank my parents always being there to support me."</div>
             <div class="verse">John 10:10</div>
         </div>
-
-        <div class="bio-card">
-            <span class="role">Barnaby Tucker</span>
-            <h2>Bodie Edwards</h2>
-            <div class="credits">Previous: Newsies, Seussical, Emma The Musical</div>
-            <div class="thanks">"My parents for the support and Kate Wilcox for helping me prepare for my first major highschool role."</div>
-            <div class="verse">Colossians 3:23</div>
-        </div>
-
         <div class="bio-card">
             <span class="role">Minnie Fay</span>
             <h2>Kate Wilcox</h2>
-            <div class="credits">Previous: Newsies, Urinetown, The Lightning Thief</div>
-            <div class="thanks">"My parents and my brother for always supporting and loving me."</div>
+            <div class="credits">Previous: Newsies (Hannah and Featured Dancer) Urinetown (Hope Cladwell) The Lightning Thief (Annabeth Chase)</div>
+            <div class="thanks">"My parents and my brother for always supporting and loving me"</div>
             <div class="verse">Matthew 5:16</div>
         </div>
-
-        <div class="bio-card">
-            <span class="role">Ambrose Kemper</span>
-            <h2>Seth Anthony</h2>
-            <div class="credits">Previous: Newsies, Matilda, Wizard of Oz</div>
-            <div class="thanks">"My parents for always supporting me, my brother Jensen for joining me on this ride, my family for always cheering me on, and God for his daily provision."</div>
-            <div class="verse">Romans 8:37</div>
-        </div>
-
-        <div class="bio-card">
-            <span class="role">Waiter</span>
-            <h2>Sterling Adkins</h2>
-            <div class="credits">Previous: Newsies, Wizard of Oz</div>
-            <div class="thanks">"I would like to thank my mom and dad for helping me through life and supporting my choices."</div>
-            <div class="verse">Matthew 6:34</div>
-        </div>
-
-        <div class="bio-card">
-            <span class="role">Rudolph / Rudy</span>
-            <h2>Owen Akin</h2>
-            <div class="credits">Previous: Newsies, The Unreturning, Wizard of Oz</div>
-            <div class="thanks">"I want to thank my parents for always being there for me, as well as my sisters for pushing me."</div>
-            <div class="verse">Philippians 4:13</div>
-        </div>
-
-        <div class="bio-card">
-            <span class="role">Stage Manager</span>
-            <h2>Claire Monroe</h2>
-            <div class="thanks">"My mom."</div>
-            <div class="verse">Matthew 5:44</div>
-        </div>
-
     </div>
-    <div id="noResults" class="no-results">No cast members found.</div>
+    <div id="noResults" class="no-results">No cast members found matching your search.</div>
 </div>
 
 <footer>
-    <p>Faith Christian Academy | Directed by Bryan Partridge</p>
-    <p>Digital Playbill Design by Denis Kashoid</p>
+    <p>Grapevine Faith Christian School<br>
+    Directed by Scott Werntz<br>
+    Digital Playbill Design by Denis Kashoid 2026</p>
 </footer>
 
 <script>
-    function filterBios() {
-        const input = document.getElementById('actorSearch').value.toLowerCase();
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchBox = document.getElementById('actorSearch');
         const cards = document.getElementsByClassName('bio-card');
         const noResults = document.getElementById('noResults');
-        let found = false;
 
-        for (let i = 0; i < cards.length; i++) {
-            const content = cards[i].textContent || cards[i].innerText;
-            if (content.toLowerCase().indexOf(input) > -1) {
-                cards[i].style.display = "";
-                found = true;
-            } else {
-                cards[i].style.display = "none";
+        searchBox.addEventListener('input', function() {
+            const filter = searchBox.value.toLowerCase().trim();
+            let foundCount = 0;
+
+            for (let i = 0; i < cards.length; i++) {
+                const cardText = cards[i].innerText.toLowerCase();
+                
+                if (cardText.includes(filter)) {
+                    cards[i].style.display = "";
+                    foundCount++;
+                } else {
+                    cards[i].style.display = "none";
+                }
             }
-        }
-        noResults.style.display = found ? "none" : "block";
-    }
+
+            if (foundCount === 0 && filter !== "") {
+                noResults.style.display = "block";
+            } else {
+                noResults.style.display = "none";
+            }
+        });
+    });
 </script>
 
 </body>
