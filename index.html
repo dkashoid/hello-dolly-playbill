@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello, Dolly! - Cast & Crew</title>
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --velvet: #800020;
+            --dark-bg: #121212;
+            --text-light: #f4f4f4;
+        }
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1514302240736-b1fee5985889?q=80&w=1000');
+            background-size: cover;
+            border-bottom: 4px solid var(--gold);
+        }
+        h1 { margin: 0; font-size: 2.5rem; text-transform: uppercase; color: var(--gold); letter-spacing: 3px; }
+        .subtitle { font-style: italic; color: #ccc; margin-top: 5px; }
+        .container { max-width: 800px; margin: auto; padding: 20px; }
+        .bio-card {
+            background: #1e1e1e;
+            border-left: 5px solid var(--gold);
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+        .bio-card h2 { margin-top: 0; color: var(--gold); font-size: 1.5rem; }
+        .role { font-weight: bold; color: #ddd; text-transform: uppercase; font-size: 0.9rem; margin-bottom: 10px; display: block; }
+        .credits { font-size: 0.85rem; color: #aaa; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        .thanks { font-style: italic; color: #ddd; font-size: 0.95rem; }
+        .verse { margin-top: 15px; font-size: 0.8rem; color: var(--gold); text-align: right; }
+        footer { text-align: center; padding: 40px; color: #777; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Hello, Dolly!</h1>
+    <p class="subtitle">Meet the Cast and Crew</p>
+</header>
+
+<div class="container">
+    <div class="bio-card">
+        <span class="role">Dolly Levi</span>
+        <h2>Ellery Church</h2>
+        <div class="credits">Previous: The Wizard of Oz, The Play That Goes Wrong, Newsies</div>
+        <div class="thanks">"I want to thank my amazing friends and family for being so supportive, the wonderful cast, and of course all the people who came together to make this musical possible!"</div>
+        <div class="verse">Ephesians 4:32</div>
+    </div>
+
+    <div class="bio-card">
+        <span class="role">Horace Vandergelder</span>
+        <h2>Jensen Anthony</h2>
+        <div class="credits">Previous: The Wizard of Oz, Newsies, The Unreturning</div>
+        <div class="thanks">"First my thanks go to my mom and dad. Without everything you've sacrificed I wouldn't have this opportunity to do what I love and more... Finally, to my Lord and Savior, Jesus Christ."</div>
+        <div class="verse">Matthew 4:19-20</div>
+    </div>
+
+    <div class="bio-card">
+        <span class="role">Barnaby Tucker</span>
+        <h2>Bodie Edwards</h2>
+        <div class="credits">Previous: Newsies, Seussical, Emma The Musical</div>
+        <div class="thanks">"My parents for the support and Kate Wilcox for helping me prepare for my first major highschool role."</div>
+        <div class="verse">Colossians 3:23</div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Production Company | Creative Director: Denis Kashoid</p>
+</footer>
+
+</body>
+</html>
