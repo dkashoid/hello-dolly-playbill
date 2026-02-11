@@ -6,66 +6,64 @@
     <title>Hello, Dolly! - Digital Playbill</title>
     <style>
         :root {
-            --gold: #D4AF37;
-            --velvet: #800020;
-            --dark-bg: #121212;
-            --card-bg: #1e1e1e;
-            --text-light: #f4f4f4;
+            --dolly-red: #c70f0f;
+            --gold-accent: #D4AF37;
+            --pure-white: #ffffff;
+            --text-black: #1a1a1a;
+            --light-gray: #f2f2f2;
         }
         body {
-            font-family: 'Georgia', serif;
-            background-color: var(--dark-bg);
-            color: var(--text-light);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-gray);
+            color: var(--text-black);
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            line-height: 1.5;
         }
         header {
             text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1514302240736-b1fee5985889?q=80&w=1000') center/cover;
-            border-bottom: 4px solid var(--gold);
-        }
-        h1 { margin: 0; font-size: 2.8rem; text-transform: uppercase; color: var(--gold); letter-spacing: 4px; }
-        .subtitle { font-style: italic; color: #ccc; margin-top: 10px; font-size: 1.2rem; }
-        .container { max-width: 800px; margin: auto; padding: 20px; }
-        .search-container { margin-bottom: 30px; text-align: center; }
-        #actorSearch {
-            width: 90%;
-            padding: 12px;
-            border-radius: 25px;
-            border: 1px solid var(--gold);
-            background: #222;
+            padding: 50px 20px;
+            background-color: var(--dolly-red);
             color: white;
+            border-bottom: 5px solid var(--gold-accent);
+        }
+        h1 { margin: 0; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; }
+        .subtitle { margin-top: 5px; font-size: 1.1rem; opacity: 0.9; }
+        .container { max-width: 700px; margin: auto; padding: 20px; }
+        .search-box {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 25px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
             font-size: 1rem;
+            box-sizing: border-box;
         }
         .bio-card {
-            background: var(--card-bg);
-            border-left: 5px solid var(--gold);
-            margin-bottom: 25px;
-            padding: 20px;
-            border-radius: 0 10px 10px 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            background: var(--pure-white);
+            border-left: 8px solid var(--dolly-red);
+            margin-bottom: 20px;
+            padding: 25px;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-        .bio-card h2 { margin-top: 0; color: var(--gold); font-size: 1.6rem; margin-bottom: 5px; }
-        .role { font-weight: bold; color: #eee; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; display: block; margin-bottom: 8px; }
-        .credits { font-size: 0.85rem; color: #aaa; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 10px; font-style: italic; }
-        .thanks { font-size: 1rem; color: #ddd; margin-bottom: 10px; }
-        .verse { font-size: 0.85rem; color: var(--gold); text-align: right; font-weight: bold; }
-        footer { text-align: center; padding: 50px 20px; color: #666; font-size: 0.9rem; border-top: 1px solid #333; }
+        .bio-card h2 { margin: 0 0 5px 0; color: var(--text-black); font-size: 1.4rem; }
+        .role { font-weight: bold; color: var(--dolly-red); text-transform: uppercase; font-size: 0.85rem; margin-bottom: 12px; display: block; }
+        .credits { font-size: 0.9rem; color: #555; margin-bottom: 15px; }
+        .thanks { font-size: 1rem; color: #333; line-height: 1.6; }
+        .verse { margin-top: 15px; font-weight: bold; color: var(--dolly-red); font-size: 0.85rem; text-align: right; border-top: 1px solid #eee; padding-top: 10px; }
+        footer { text-align: center; padding: 40px 20px; color: #888; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>Hello, Dolly!</h1>
-    <p class="subtitle">Cast & Creative Team</p>
+    <p class="subtitle">Cast & Creative Team Bios</p>
 </header>
 
 <div class="container">
-    <div class="search-container">
-        <input type="text" id="actorSearch" placeholder="Search for an actor or role..." onkeyup="filterBios()">
-    </div>
+    <input type="text" id="actorSearch" class="search-box" placeholder="Search by name or character..." onkeyup="filterBios()">
 
     <div id="bioList">
         <div class="bio-card">
@@ -79,28 +77,4 @@
         <div class="bio-card">
             <span class="role">Horace Vandergelder</span>
             <h2>Jensen Anthony</h2>
-            <div class="credits">Previous: The Wizard of Oz, Newsies, The Unreturning</div>
-            <div class="thanks">"First my thanks go to my mom and dad. Without everything you've sacrificed I wouldn't have this opportunity to do what I love and more... Next to my built-in-best-friend, my brother, Seth... Finally, but most importantly, to my Lord and Savior, Jesus Christ."</div>
-            <div class="verse">Matthew 4:19-20</div>
-        </div>
-
-        <div class="bio-card">
-            <span class="role">Horace Vandergelder</span>
-            <h2>Javed Drew</h2>
-            <div class="credits">Previous: Newsies, The Wizard of Oz, The Unreturning</div>
-            <div class="thanks">"I would love to thank my parents and family for supporting me... I want to thank Mr. Partridge, Mr. Werntz, and Mrs. Martin... Lastly and most importantly, I want to thank my Lord and Savior Jesus Christ."</div>
-            <div class="verse">1 Timothy 4:12, Matthew 25:23</div>
-        </div>
-
-        <div class="bio-card">
-            <span class="role">Cornelius Hackl</span>
-            <h2>RJ Weaver</h2>
-            <div class="credits">Previous: Newsies (Jack Kelly), UrineTown (Bobby Strong), The Unreturning (George)</div>
-            <div class="thanks">"I want to thank Jesus Christ for dying for my sins. I also want to thank my parents always being there to support me. Finally, I want to thank Mr. Ubiera for teaching me how to sing and for Bryan Partridge for cultivating my love for theater."</div>
-            <div class="verse">John 10:10</div>
-        </div>
-
-        <div class="bio-card">
-            <span class="role">Barnaby Tucker</span>
-            <h2>Bodie Edwards</h2>
-            <div class="credits">Previous: Newsies,
+            <div class="credits">Previous: The Wizard of Oz
